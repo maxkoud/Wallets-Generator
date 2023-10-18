@@ -25,5 +25,6 @@ for i in range(100):
     sheet.cell(row=i+2, column=3).value=bip44_hdwallet.private_key()
     bip44_hdwallet.clean_derivation()
 
+# Сохраняем данные в таблицу
 book.save("wallets.xlsx")
 book.close()
