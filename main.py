@@ -12,10 +12,10 @@ sheet['B1'] = "Address"
 sheet['C1'] = "Private key"
 
 # Выбор кол-ва кошельков для генерации
-#N = int(input("Enter number of wallets: "))
+N = int(input("Enter number of wallets: "))
 
-#for i in range(N):
-for i in range(100):
+for i in range(N):
+#for i in range(100):
     MNEMONIC: str = generate_mnemonic(language="english", strength=128)
     PASSPHRASE: Optional[str] = None  # "meherett"
     bip44_hdwallet: BIP44HDWallet = BIP44HDWallet(cryptocurrency=EthereumMainnet)
